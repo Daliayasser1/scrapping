@@ -5,10 +5,10 @@ const path = require("path");
 const axios = require("axios");
 const { v4: uuidv4 } = require("uuid");
 
-
 async function scrapBasiclook(options) {
   const urls = [
-    "https://basiclook.com/collections/women", "https://basiclook.com/collections/men"
+    "https://basiclook.com/collections/women",
+    "https://basiclook.com/collections/men"
   ];
   const browser = await puppeteer.launch();
   let allItems = [];
@@ -27,9 +27,10 @@ async function scrapBasiclook(options) {
         return Array.from(productElements).map((el) => el.href);
       });
       for (const itemUrl of productLinks) {
+        console.log("Scraping item:", itemUrl); // Print the URL being scraped
         await page.goto(itemUrl);
 
-        const productDetails = await page.evaluate(() => {
+        const productDetails = await page.evaluate((itemUrl) => {
           const title = document.querySelector("h1").innerText;
           const price = document.querySelector(".price__regular")
             ? document.querySelector(".price__regular").innerText
@@ -54,8 +55,10 @@ async function scrapBasiclook(options) {
             )
           ).map((input) => input.value);
 
-          return { title, price, description, images, sizes, colors };
-        });
+          return { title, price, description, images, sizes, colors, url: itemUrl };
+        }, itemUrl); // Pass itemUrl to page.evaluate
+
+        console.log("Product Details:", productDetails); // Print the scraped details
         allItems.push(productDetails);
       }
 
@@ -68,6 +71,7 @@ async function scrapBasiclook(options) {
 
     await page.close();
   }
+
   fs.writeFile("basiclook Collection.json", JSON.stringify(allItems, null, 2), (err) => {
     if (err) throw err;
     console.log("File saved");
@@ -77,7 +81,7 @@ async function scrapBasiclook(options) {
     for (const item of allItems) {
       for (let imgIndex = 0; imgIndex < item.images.length; imgIndex++) {
         const imageUrl = item.images[imgIndex];
-        console.log("Image URL:", imageUrl);
+        console.log("Downloading image:", imageUrl); // Print the image being downloaded
         const randomUUID = uuidv4();
         const imagePath = path.join(options.downloadPath, `product_${randomUUID}.jpg`);
         const writer = fs.createWriteStream(imagePath);
@@ -98,10 +102,10 @@ async function scrapBasiclook(options) {
     }
   }
 
-  
-
   await browser.close();
   return;
 }
 
 module.exports = scrapBasiclook;
+
+

@@ -1,4 +1,3 @@
-
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
@@ -7,12 +6,12 @@ const { v4: uuidv4 } = require("uuid");
 
 async function scrapDalydress(options) {
   const urls = [
-          "https://dalydress.com/collections/all-blouses?page=4",
-          "https://dalydress.com/collections/all-blouses?page=3",
-          "https://dalydress.com/collections/cardigans-2",
-          "https://dalydress.com/collections/all-pulloverss",
-          "https://dalydress.com/collections/all-shirts",
-          "https://dalydress.com/collections/all-t-shirtss",
+    "https://dalydress.com/collections/all-blouses?page=4",
+    "https://dalydress.com/collections/all-blouses?page=3",
+    "https://dalydress.com/collections/cardigans-2",
+    "https://dalydress.com/collections/all-pulloverss",
+    "https://dalydress.com/collections/all-shirts",
+    "https://dalydress.com/collections/all-t-shirtss",
   ];
   const browser = await puppeteer.launch();
   let allItems = [];
@@ -32,13 +31,13 @@ async function scrapDalydress(options) {
         return Array.from(productElements).map((el) => el.href);
       });
 
-      console.log(productLinks);
       for (const itemUrl of productLinks) {
         await page.goto(itemUrl);
 
         const productDetails = await page.evaluate(() => {
           const title = document.querySelector(".product-single__title").innerText.trim();
           const price = document.querySelector(".product__price .money").innerText.trim();
+          const url = window.location.href;
 
           const description = document.querySelector(
             ".product-single__description-full p"
@@ -59,13 +58,12 @@ async function scrapDalydress(options) {
             document.querySelectorAll('.variant-input-wrap[name="Color"] .variant-input')
           ).map((el) => el.querySelector("input").value);
 
-          return { title, price, description, images, sizes, colors };
+          return { title, price, url, description, images, sizes, colors };
         });
         console.log(productDetails);
         allItems.push(productDetails);
       }
 
-      // Get URL for the next page
       const nextPageButton = await page.$(".pagination-item--next a");
       nextPageUrl = nextPageButton
         ? await (await nextPageButton.getProperty("href")).jsonValue()
@@ -75,11 +73,6 @@ async function scrapDalydress(options) {
     await page.close();
   }
   
-  fs.writeFile("dalydress Collection.json", JSON.stringify(allItems, null, 2), (err) => {
-    if (err) throw err;
-    console.log("File saved");
-  });
-
   if (options.download && options.downloadPath) {
     for (const item of allItems) {
       for (let imgIndex = 0; imgIndex < item.images.length; imgIndex++) {
@@ -105,10 +98,10 @@ async function scrapDalydress(options) {
     }
   }
 
-  
-
   await browser.close();
   return;
 }
 
 module.exports = scrapDalydress;
+
+

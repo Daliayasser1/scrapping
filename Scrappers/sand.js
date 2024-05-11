@@ -6,7 +6,6 @@ const axios = require("axios");
 const path = require("path");
 const { v4: uuidv4 } = require("uuid");
 
-
 async function scrapSand(options) {
   const urls = [
     "https://sandeg.shop/collections/all",
@@ -26,14 +25,14 @@ async function scrapSand(options) {
 
     // Extract all product URLs from the main page
     const productUrls = await page.evaluate(() => {
-      const links = Array.from(document.querySelectorAll(".card__heading a"));
+      const links = Array.from(document.querySelectorAll(".card__information a"));
       return links.map((link) => link.href);
     });
-    for (const url2 of productUrls) {
+    for (const productUrl of productUrls) {
       const productPage = await browser.newPage();
-      await productPage.goto(url2);
+      await productPage.goto(productUrl);
 
-      const item = await productPage.evaluate(() => {
+      const item = await productPage.evaluate((productUrl) => {
         try {
           const title = document.querySelector("h1").innerText;
           const price = document.querySelector(".price__regular .price-item--regular").innerText;
@@ -48,13 +47,13 @@ async function scrapSand(options) {
             (img) => img.src
           );
 
-          return { title, price, description, sizes, colors, images };
+          return {  title, price, description, sizes, colors, images,url: productUrl };
         } catch (error) {
           console.error("Error while extracting item:", error);
           console.error("Failed selector:", error.selector); // Log the failing selector
           return null; // Return null if extraction fails
         }
-      });
+      }, productUrl);
       if (item !== null) {
         console.log(item);
         if (options.download) await downloadImages(item.images, item.title, options.downloadPath);
@@ -98,7 +97,7 @@ async function downloadImages(images, title, downloadPath) {
       console.error("Failed to download image:", error);
     }
   }
-
 }
 
 module.exports = scrapSand;
+

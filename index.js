@@ -24,7 +24,7 @@ const runAllScrapers = async () => {
   
   const scrapers = [
 
-     {
+/*     {
       scraper: scrapMobaco,
       options: {
         download: true,
@@ -48,7 +48,7 @@ const runAllScrapers = async () => {
       },
     }, 
   
-   {
+  {
       scraper: scrapSand,
       options: {
         download: true,
@@ -64,15 +64,15 @@ const runAllScrapers = async () => {
       },
     }, 
   
-    {
+   {
       scraper: scrapDalydress,
       options: {
         download: true,
         downloadPath: `${__dirname}/assets/items`,
       },
-    }, 
+    }, */
   
-   {
+  {
       scraper: scrapDefacto,
       options: {
         download: true,
@@ -80,7 +80,7 @@ const runAllScrapers = async () => {
       },
     }, 
   
-   {
+ /*  {
       scraper: scrapMango,
       options: {
         download: true,
@@ -94,7 +94,7 @@ const runAllScrapers = async () => {
         download: true,
         downloadPath: `${__dirname}/assets/items`,
       },
-    }, 
+    }, */
   ]; 
 
   // Execute all scrapers concurrently
