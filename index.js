@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const urls = require("./h&m.data");
+//const urls = require("./h&m.data");
 //const scrap = require("./Scrappers/defactoBlouse");
 const scrapDefacto = require("./Scrappers/defactoBlouse");
 const scrapDalydress = require("./Scrappers/dalydress");
@@ -24,7 +24,7 @@ const runAllScrapers = async () => {
   
   const scrapers = [
 
-    /*   {
+     {
       scraper: scrapMobaco,
       options: {
         download: true,
@@ -35,7 +35,7 @@ const runAllScrapers = async () => {
     {
       scraper: scrapAmericanEagle,
       options: {
-        download: true,
+        download: ftrue,
         downloadPath: `${__dirname}/assets/items`,
       }, 
     },  
@@ -48,7 +48,7 @@ const runAllScrapers = async () => {
       },
     }, 
   
-    {
+   {
       scraper: scrapSand,
       options: {
         download: true,
@@ -56,7 +56,7 @@ const runAllScrapers = async () => {
       },
     }, 
  
-    {
+   {
       scraper: scrapBasiclook,
       options: {
         download: true,
@@ -80,15 +80,15 @@ const runAllScrapers = async () => {
       },
     }, 
   
-    {
+   {
       scraper: scrapMango,
       options: {
         download: true,
         downloadPath: `${__dirname}/assets/items`,
       },
-    }, */
+    }, 
   
-    {
+   {
       scraper: scrapHM,
       options: {
         download: true,

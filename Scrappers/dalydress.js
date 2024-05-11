@@ -74,6 +74,11 @@ async function scrapDalydress(options) {
 
     await page.close();
   }
+  
+  fs.writeFile("dalydress Collection.json", JSON.stringify(allItems, null, 2), (err) => {
+    if (err) throw err;
+    console.log("File saved");
+  });
 
   if (options.download && options.downloadPath) {
     for (const item of allItems) {
@@ -100,10 +105,7 @@ async function scrapDalydress(options) {
     }
   }
 
-  fs.writeFile("dalydress Collection.json", JSON.stringify(allItems, null, 2), (err) => {
-    if (err) throw err;
-    console.log("File saved");
-  });
+  
 
   await browser.close();
   return;

@@ -697,42 +697,6 @@
     ]
   },
   {
-    "title": "OXFORD CLASSIC SHIRT",
-    "price": "Regular price\nLE 450",
-    "description": "   ",
-    "images": [
-      "https://basiclook.com/cdn/shop/products/IMG_9763.jpg?v=1681823463&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9657.jpg?v=1681823463&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9664.jpg?v=1681157026&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9665.jpg?v=1681157052&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9597.jpg?v=1681157067&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9613.jpg?v=1681157088&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9754.jpg?v=1681156911&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9746.jpg?v=1681157132&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9699.jpg?v=1681157113&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9714.jpg?v=1681156911&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9844.jpg?v=1681156911&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9853.jpg?v=1681157157&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9822.jpg?v=1681156911&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9813.jpg?v=1681156911&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9767.jpg?v=1681157179&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9791.jpg?v=1681156911&width=64"
-    ],
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL",
-      "3XL"
-    ],
-    "colors": [
-      "White",
-      "Light Blue",
-      "Dark Blue"
-    ]
-  },
-  {
     "title": "LINEN SHIRTS",
     "price": "Regular price\nLE 699",
     "description": " ",
@@ -988,7 +952,7 @@
     ]
   },
   {
-    "title": "COMFORT SHORTS010009",
+    "title": "COMFORT SHORTS",
     "price": "Regular price\nLE 180",
     "description": "    ",
     "images": [
@@ -1239,27 +1203,6 @@
     ]
   },
   {
-    "title": "FORMAL PANTS - MEN",
-    "price": "Regular price\nLE 550",
-    "description": "   ",
-    "images": [
-      "https://basiclook.com/cdn/shop/products/IMG_9624.jpg?v=1681155953&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9638.jpg?v=1681156030&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9627.jpg?v=1681156030&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9652.jpg?v=1681156030&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9651.jpg?v=1681156030&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9861.jpg?v=1681156001&width=64"
-    ],
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "colors": []
-  },
-  {
     "title": "BASIC SWEATER",
     "price": "Regular price\nLE 400",
     "description": "   ",
@@ -1289,42 +1232,6 @@
       "Black",
       "White",
       "Grey"
-    ]
-  },
-  {
-    "title": "OXFORD CLASSIC SHIRT",
-    "price": "Regular price\nLE 450",
-    "description": "   ",
-    "images": [
-      "https://basiclook.com/cdn/shop/products/IMG_9763.jpg?v=1681823463&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9657.jpg?v=1681823463&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9664.jpg?v=1681157026&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9665.jpg?v=1681157052&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9597.jpg?v=1681157067&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9613.jpg?v=1681157088&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9754.jpg?v=1681156911&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9746.jpg?v=1681157132&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9699.jpg?v=1681157113&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9714.jpg?v=1681156911&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9844.jpg?v=1681156911&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9853.jpg?v=1681157157&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9822.jpg?v=1681156911&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9813.jpg?v=1681156911&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9767.jpg?v=1681157179&width=64",
-      "https://basiclook.com/cdn/shop/products/IMG_9791.jpg?v=1681156911&width=64"
-    ],
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL",
-      "3XL"
-    ],
-    "colors": [
-      "White",
-      "Light Blue",
-      "Dark Blue"
     ]
   },
   {
@@ -1375,35 +1282,6 @@
     ],
     "colors": [
       "Black"
-    ]
-  },
-  {
-    "title": "POLO T-SHIRT",
-    "price": "Regular price\nLE 220",
-    "description": " ",
-    "images": [
-      "https://basiclook.com/cdn/shop/files/IMG_0798.jpg?v=1686484953&width=64",
-      "https://basiclook.com/cdn/shop/files/IMG_0809.jpg?v=1686484953&width=64",
-      "https://basiclook.com/cdn/shop/files/IMG_0817.jpg?v=1686484953&width=64",
-      "https://basiclook.com/cdn/shop/files/IMG_0827-Edit.jpg?v=1686484953&width=64",
-      "https://basiclook.com/cdn/shop/files/IMG_0833.jpg?v=1686484953&width=64",
-      "https://basiclook.com/cdn/shop/files/IMG_0835.jpg?v=1686484953&width=64",
-      "https://basiclook.com/cdn/shop/files/IMG_0839.jpg?v=1686484953&width=64",
-      "https://basiclook.com/cdn/shop/files/IMG_0845.jpg?v=1686484953&width=64",
-      "https://basiclook.com/cdn/shop/files/IMG_0784.jpg?v=1686484953&width=64",
-      "https://basiclook.com/cdn/shop/files/IMG_0794.jpg?v=1686484953&width=64"
-    ],
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "colors": [
-      "Black",
-      "Navy Blue",
-      "White"
     ]
   },
   {

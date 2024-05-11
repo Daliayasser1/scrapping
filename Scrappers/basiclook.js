@@ -68,6 +68,10 @@ async function scrapBasiclook(options) {
 
     await page.close();
   }
+  fs.writeFile("basiclook Collection.json", JSON.stringify(allItems, null, 2), (err) => {
+    if (err) throw err;
+    console.log("File saved");
+  });
 
   if (options.download && options.downloadPath) {
     for (const item of allItems) {
@@ -94,10 +98,7 @@ async function scrapBasiclook(options) {
     }
   }
 
-  fs.writeFile("basiclook Collection.json", JSON.stringify(allItems, null, 2), (err) => {
-    if (err) throw err;
-    console.log("File saved");
-  });
+  
 
   await browser.close();
   return;
